@@ -1,0 +1,24 @@
+<md-grid-list cols="2" rowHeight="4:1">
+    <md-grid-tile>
+        <button md-raised-button (click)="createTournament()">Create new tournament</button>
+    </md-grid-tile>
+    <md-grid-tile>
+        <md-card>
+            <md-card-title>
+                Available Tournaments
+                <md-icon>security</md-icon>
+            </md-card-title>
+            <md-card-content>
+                <md-list>
+                    <md-list-item *ngFor="let tournament of tournaments | async">
+                        <h3 md-line>
+                            <a [routerLink]="['/detail', tournament.id]">
+                                {{tournament.name}}
+                            </a>
+                        </h3>
+                    </md-list-item>
+                </md-list>
+            </md-card-content>
+        </md-card>
+    </md-grid-tile>
+</md-grid-list>

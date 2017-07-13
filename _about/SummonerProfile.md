@@ -1,12 +1,13 @@
+
 Perfil do Invocador
 ========================
 
-**Nome completo:**   
-**Data de nascimento:**   
+**Nome completo:**   *Ruan Guimarães Barcellos*
 
-**Como nos conheceu:**
+**Data de nascimento:**   *10/09/1990*
 
-**Nick no LOL (opcional... por enquanto):**   
-**Perfil na STEAM:**
+**Como nos conheceu:**   *Fui abordado pelo LinkedIn*
 
+**Nick no LOL (opcional... por enquanto):**   *N/A*
 
+**Perfil na STEAM:** *N/A*

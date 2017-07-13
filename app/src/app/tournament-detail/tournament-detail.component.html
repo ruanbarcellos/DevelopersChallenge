@@ -1,0 +1,29 @@
+<md-grid-list cols="1" rowHeight="3:1">
+    <md-grid-tile>
+        <md-card>
+            <md-card-title>
+                {{tournament?.name}} Tournament
+                <md-icon>security</md-icon>
+            </md-card-title>
+            <md-card-subtitle *ngIf="hasWinner()">
+                <span class="winner">{{tournament.winner.name}} has won this tournament</span>
+            </md-card-subtitle>
+            <md-card-subtitle>Matches</md-card-subtitle>
+
+            <md-card-content>
+                <md-list>
+                    <md-list-item *ngFor="let match of tournament?.matches">
+                        <h3 md-line *ngIf="match.teamA">
+                            <span [class]="getWinnerClass(match, match.teamA.id)">{{match.teamA.name}} ({{match.teamAScore || 0}})</span>
+                            <strong>Vs.</strong>
+                            <span [class]="getWinnerClass(match, match.teamB?.id)">({{match.teamBScore || 0}}){{match.teamB?.name}}</span>
+                            <button *ngIf="!hasWinner()" md-icon-button color="primary" (click)="editMatchScore(match)">
+                                <md-icon>edit</md-icon>
+                            </button>
+                        </h3>
+                    </md-list-item>
+                </md-list>
+            </md-card-content>
+        </md-card>
+    </md-grid-tile>
+</md-grid-list>

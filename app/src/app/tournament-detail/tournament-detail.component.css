@@ -1,0 +1,16 @@
+.winner {
+    color: #4CAF50;
+}
+.loser {
+    color: #FF5722;
+}
+.draw {
+    color: #2196F3;
+}
+
+md-card {
+    width: 60%;
+}
+md-card button[md-icon-button]{
+    float: right;
+}

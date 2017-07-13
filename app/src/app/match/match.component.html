@@ -1,0 +1,14 @@
+<h2 md-dialog-title>Edit Match Score</h2>
+<md-dialog-content>
+    <md-input-container>
+        <input mdInput [placeholder]="match?.teamA?.name" [(ngModel)]="match.teamAScore" [ngModelOptions]="{standalone: true}" tabindex="-1">
+    </md-input-container>
+    <strong>Vs.</strong>
+    <md-input-container>
+        <input mdInput [placeholder]="match?.teamB?.name" [(ngModel)]="match.teamBScore" [ngModelOptions]="{standalone: true}" tabindex="-1">
+    </md-input-container>
+</md-dialog-content>
+<md-dialog-actions>
+    <button md-button md-dialog-close>Cancel</button>
+    <button color="primary" md-button (click)="setScore()">Save</button>
+</md-dialog-actions>
